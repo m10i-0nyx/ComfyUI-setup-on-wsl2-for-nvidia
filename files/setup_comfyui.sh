@@ -12,7 +12,7 @@ uv venv -p 3.13 ${VENV_PATH}
 uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
 
 # ディレクトリを作成
-mkdir -p /workspace/data/models/{checkpoints,clip,clip_vision,controlnet,diffusion_models,gligen,hypernetworks,loras,text_encoders,upscale,vae}
+mkdir -p /workspace/data/models/{checkpoints,clip_vision,controlnet,diffusion_models,gligen,hypernetworks,loras,text_encoders,upscale,vae}
 
 # ComfyUI をクローン,　依存関係をインストール
 rm -rf ${COMFYUI_PATH} > /dev/null 2>&1
@@ -42,7 +42,7 @@ cat << '_EOL_' > /workspace/comfyui/extra_model_paths.yaml
 a111:
   base_path: /workspace
   checkpoints: data/models/checkpoints
-  clip: data/models/clip
+  clip_vision: data/models/clip_vision
   controlnet: data/models/controlnet
   custom_nodes: /workspace/comfyui/custom_nodes
   diffusion_models: data/models/diffusion_models
@@ -50,6 +50,7 @@ a111:
   gligen: data/models/gligen
   hypernetworks: data/models/hypernetworks
   loras: data/models/loras
+  text_encoders: data/models/text_encoders
   upscale_models: data/models/upscale_models
   vae: data/models/vae
 _EOL_
