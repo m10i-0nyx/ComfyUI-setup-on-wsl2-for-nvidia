@@ -1,0 +1,10 @@
+*.ps1
+./*.sh
+nohup.out
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+*.bak
+*.swp
