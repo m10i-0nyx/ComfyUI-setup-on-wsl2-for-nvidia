@@ -21,7 +21,4 @@ REM --- BEGIN POWERSHELL ---
 $env:WSL_UTF8 = 1
 $DistroName = "Ubuntu24.04-ComfyUI"
 
-Remove-Item -Path ".\setup_comfyui.sh" -ErrorAction SilentlyContinue
-curl.exe -o ".\setup_comfyui.sh" "https://raw.githubusercontent.com/m10i-0nyx/ComfyUI-setup-on-wsl2-for-nvidia/refs/heads/main/files/setup_comfyui.sh"
-wsl.exe -d $DistroName -- bash -c "bash ./setup_comfyui.sh"
-Remove-Item -Path ".\setup_comfyui.sh" -ErrorAction SilentlyContinue
+wsl.exe -d $DistroName -- bash -c "bash ./files/setup_comfyui.sh"
